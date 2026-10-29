@@ -1,0 +1,23 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 24px;
+    background: #f6b2c0;
+    color: #2d2220;
+}
+
+.page-shell {
+    max-width: 1400px;
+    margin: 0 auto;
+    background: #fff8ed;
+    border-radius: 22px;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+}

@@ -1,0 +1,154 @@
+
+/* Graella de productes */
+.products-list {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 22px;
+    width: 100%;
+}
+
+/* Targeta */
+.product-card {
+    min-width: 0;
+    overflow: hidden;
+    border-radius: 16px;
+    background: #fff8ed;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(110, 40, 35, 0.10);
+}
+
+/* Imatge del producte */
+.product-image-container {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 1 / 1;
+    background: #f8d4d5;
+    border-radius: 16px;
+}
+
+.product-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    mix-blend-mode: multiply;
+    transition: transform 0.35s ease;
+}
+
+.product-card:hover .product-image {
+    transform: scale(1.05);
+}
+
+/* Botó de preferits */
+.product-favorite {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: grid;
+    place-items: center;
+    width: 32px;
+    height: 32px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255, 248, 237, 0.9);
+    color: #a91e26;
+    font-size: 19px;
+    cursor: pointer;
+}
+
+/* Informació */
+.product-info {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    padding: 14px 5px 16px;
+}
+
+.product-name {
+    margin: 0;
+    color: #342523;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 17px;
+    font-weight: normal;
+    line-height: 1.35;
+}
+
+.product-price {
+    margin: 0;
+    color: #b51f27;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+/* Valoració */
+.product-rating {
+    color: #bd2028;
+    font-size: 13px;
+}
+
+/* Botó d'afegir */
+.product-add-button {
+    align-self: flex-start;
+    display: grid;
+    place-items: center;
+    width: 34px;
+    height: 34px;
+    margin-top: 4px;
+    border: none;
+    border-radius: 50%;
+    background: #c91f28;
+    color: white;
+    font-size: 23px;
+    line-height: 1;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.product-add-button:hover {
+    background: #991720;
+    transform: scale(1.08);
+}
+
+/* Quan no hi ha resultats */
+.no-products {
+    grid-column: 1 / -1;
+    padding: 45px 20px;
+    border-radius: 16px;
+    background: #fbe0df;
+    color: #7d3936;
+    text-align: center;
+}
+
+/* Tauletes */
+@media (max-width: 900px) {
+    .products-list {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+    }
+}
+
+/* Mòbils */
+@media (max-width: 600px) {
+    .products-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+    }
+
+    .product-name {
+        font-size: 15px;
+    }
+
+    .product-info {
+        padding: 10px 3px 13px;
+    }
+}
+
+@media (max-width: 350px) {
+    .products-list {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,38 @@
+
+/* Contenidor general de la web */
+#root {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.app {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 24px;
+    background: #fff8ed;
+    border-radius: 22px;
+}
+
+/* Contingut principal */
+.app main {
+    min-height: 400px;
+    padding: 24px;
+}
+
+/* Estil dels enllaços generals */
+.app a {
+    transition: color 0.2s ease;
+}
+
+/* Adaptació a mòbils */
+@media (max-width: 600px) {
+    .app {
+        padding: 14px;
+        border-radius: 16px;
+    }
+
+    .app main {
+        padding: 16px 10px;
+    }
+}
